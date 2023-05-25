@@ -1,0 +1,102 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Profit</title>
+    <style>
+        /* CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        form {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1e8449;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .output {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Profit</h1>
+        <form action="/login" method="post">
+            <label for="gr">Global Reactive Power</label>
+            <br>
+            <input type="text" name="gr" required>
+            
+            <label for="gi">Global Intensity</label>
+            <br>
+            <input type="text" name="gi" required>
+            
+            <label for="sm1">Sub metering 1</label>
+            <br>
+            <input type="text" name="sm1" required>
+            
+            <label for="sm2">Sub metering 2</label>
+            <br>
+            <input type="text" name="sm2" required>
+            
+            <label for="sm3">Sub metering 3</label>
+            <br>
+            <input type="text" name="sm3" required>
+            
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        
+        {% if y %}
+        <div class="output">
+            <p><strong>{{ y }}</strong></p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
